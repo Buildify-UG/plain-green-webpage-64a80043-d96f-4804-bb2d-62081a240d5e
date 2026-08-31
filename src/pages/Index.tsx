@@ -2,10 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_ANON_KEY
-);
+const supabaseUrl = 'https://satqfvbyrydjberfojdl.supabase.co';
+const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNhdHFmdmJ5cnlkamJlcmZvamRsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODgyMDE2MjQsImV4cCI6MjEwMzc3NzYyNH0.J3Gt2FDwf1twaGX6c-0iKpvkM0Ux_dKKMjtmdYt60dg';
+
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 interface User {
   id: string;
